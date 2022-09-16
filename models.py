@@ -28,7 +28,7 @@ class Pokemon:
         print(f'Pokemon {pokemon2.name}')
         print(f'HP {pokemon2.hp}')
         print()
-
+        # Checando resistência por tipo
         version = ['Fire', 'Water', 'Grass']
         for i, k in enumerate(version):
             if self.types == k:
@@ -68,13 +68,13 @@ class Pokemon:
                 print(f'{self.name} used {self.move2}')
                 time.sleep(1)
                 pokemon2.defense -= 2
-                print(f'{pokemon2} loses defense')
+                print(f'{pokemon2.name} loses defense')
 
             time.sleep(1)
             print(f"\n{self.name}\t\tHLTH\t{self.hp}")
             print(f"{pokemon2.name}\t\tHLTH\t{pokemon2.hp}\n")
             time.sleep(.5)
-
+            # derrota adversário
             if pokemon2.hp <= 0:
                 print(f'{pokemon2.name} fainted...')
                 break
@@ -87,11 +87,11 @@ class Pokemon:
             print(f"\n{self.name}\t\tHLTH\t{self.hp}")
             print(f"{pokemon2.name}\t\tHLTH\t{pokemon2.hp}\n")
             time.sleep(.5)
-
+            # derrota jogo
             if self.hp <= 0:
                 print(f'{self.name} is fainted...')
                 break
-
+    # cura
     def heal(self):
         print(f'{self.name} drink a potion and healed 25 HP')
         self.hp += 25
